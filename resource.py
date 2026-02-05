@@ -197,8 +197,7 @@ if __name__ == "__main__":
         r = subprocess.run("pm path com.PigeonGames.Phigros",stdin=subprocess.DEVNULL,stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,shell=True)
         file_path = r.stdout[8:-1].decode()
     else:
-        file_path = 'Phigros_3.18.2.apk'
-        # file_path = sys.argv[1]
+        file_path = sys.argv[1]
     c = ConfigParser()
     c.read("config.ini", "utf8")
     types = c["TYPES"]
