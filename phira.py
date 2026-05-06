@@ -99,9 +99,9 @@ for id, info in infos.items():
             except BadZipFile as e:
                 print(f"错误：创建 .pez 文件 {pez_path} 时出错 - {e}")
             except Exception as e:
-                print(f"错误：写入 .pez 文件 {pez_path} 时出错2 - {e}")
+                print(f"错误：写入 .pez 文件 {pez_path} 时出错 - {e}")
 
     except KeyError as e:
         print(f"错误：ID {id} 缺少必要的键 {e}。")
     except Exception as e:
-        print(f"意外错误：处理 ID {id} 时发生错误1 - {e}")
+        print(f"意外错误：处理 ID {id} 时发生错误 - {e}")
