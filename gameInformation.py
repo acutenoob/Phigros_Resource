@@ -48,11 +48,19 @@ def run(path, logger):
             else:
                 difficulty.append([song["songsId"]] + song["difficulty"])
             if song["songsName"] == "Random":
-                a = [' ','R','a','n','d','o','m']
+                a = ["","[R]","[A]","[N]","[D]","[O]","[M]"]
+                charters = [
+    ["Barbarianerman", "IMD_6", "_鉄"],
+    ["Barbarianerman × V17AMax", "IMD_6 × JKy", "_鉄 × Rikko"],
+    ["Barbarianerman × Pcat", "IMD_6 × Ctymax", "_鉄 × NerSAN"],
+    ["Barbarianerman × TimiTini", "IMD_6 × Gausbon", "_鉄 × Myna"],
+    ["Barbarianerman × Clutter", "IMD_6 × Uvernight", "_鉄 × Su1fuR"],
+    ["Barbarianerman × 阿爽", "IMD_6 × 晨", "_鉄 × 百九十八"],
+    ["Barbarianerman × J.R", "IMD_6 × Likey", "_鉄 × XMT小咩兔"]
+]
                 for i in range(0,7):
-                    song
                     difficulty.append([song["songsId"][:-1] + str(i)] + song["difficulty"])
-                    table.append((song["songsId"][:-1] + str(i), song["songsName"] + a[i], song["composer"], song["illustrator"], *song["charter"]))
+                    table.append((song["songsId"][:-1] + str(i), song["songsName"] + a[i], song["composer"], song["illustrator"], *charters[i]))
             else:
                 table.append((song["songsId"], song["songsName"], song["composer"], song["illustrator"], *song["charter"]))
 
