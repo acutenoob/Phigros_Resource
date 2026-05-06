@@ -2,7 +2,7 @@ import os
 import shutil
 from zipfile import ZipFile, BadZipFile
 
-levels = ["EZ", "HD", "IN", "AT","Legacy","EZ_Error","HD_Error","IN_Error","NUll"]
+levels = ["EZ", "HD", "IN", "AT","Legacy","EZ_Error","HD_Error","IN_Error"]
 
 # 删除旧目录并创建新目录
 try:
@@ -60,8 +60,6 @@ for id, info in infos.items():
     try:
         print(f"正在处理：{info['Name']}，作曲者：{info['Composer']}")
         for level_index in range(len(info.get("difficulty", []))):
-            if info['Name'] == "望影の方舟Six":
-                print("LABEL" + str(len(info['difficulty'])))
             if info['difficulty'][level_index] == "0.0":
                 continue
             level = levels[level_index]
